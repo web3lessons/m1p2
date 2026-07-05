@@ -3,18 +3,13 @@
 import {
   HASH_PREFIX,
   BLOCK_REWARD,
-  sha256OfBlock,
+  isHashValid,
   getBalanceFromMap,
 } from './shared.js'
 
-const isValidHash = (block, previousHash) =>
-  block.previousHash === previousHash &&
-  block.hash.startsWith(HASH_PREFIX) &&
-  block.hash === sha256OfBlock(block)
-
 /** @param {Block} block */
 export const calculateBalancesAfterBlock = (balances, block, previousHash) => {
-  if (!isValidHash(block, previousHash)) {
+  if (!isHashValid(block, previousHash)) {
     return null
   }
 
