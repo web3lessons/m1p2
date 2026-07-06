@@ -1,4 +1,4 @@
-/** @typedef {import('./types').Block} Block */
+/** @import { Block } from './types' */
 
 import {
   HASH_PREFIX,

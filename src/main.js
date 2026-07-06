@@ -1,4 +1,4 @@
-/** @typedef {import('./types').Block} Block */
+/** @import { Block } from './types' */
 
 import { Blockchain } from './Blockchain.js'
 import { sha256OfBlock, HASH_PREFIX } from './shared.js'
@@ -11,11 +11,11 @@ const blockchain = new Blockchain('data.json')
 const block = {
   miner: myAddress,
   previousHash:
-    '000000001387f13e25774d75d40814ea84cbfe830737e21e6a4c5e7db34e59f4',
+    '0000006080adafa493b762ac4cc6e1ff55e33b9d64face45a02eb5a5f30bb99a',
   transactions: [
     {
-      to: myAddress,
-      from: friendAddress,
+      from: myAddress,
+      to: friendAddress,
       amount: 10,
       fee: 5,
     }

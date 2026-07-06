@@ -11,13 +11,13 @@
     "previousHash": "0000002e061ed3bb62167fdf2b124f7ab80e444a72db8ba6bbc666cd45177448",
     "transactions": [
       {
-        "to": "0xb22cc6da24ccd8c9e3a4",
         "from": "0x054070b165ec2a4ec1ea",
-        "amount": 90,
-        "fee": 3
+        "to": "0xb22cc6da24ccd8c9e3a4",
+        "amount": 10,
+        "fee": 5
       }
     ],
-    "nonce": 15919326,
-    "hash": "000000001387f13e25774d75d40814ea84cbfe830737e21e6a4c5e7db34e59f4"
+    "nonce": 32506358,
+    "hash": "0000006080adafa493b762ac4cc6e1ff55e33b9d64face45a02eb5a5f30bb99a"
   }
 ]

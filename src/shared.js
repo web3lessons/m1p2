@@ -8,7 +8,7 @@ const sha256 = value => createHash('sha256')
   .update(value)
   .digest('hex')
 
-const sha256OfBlock = block => {
+export const sha256OfBlock = block => {
   const { hash, ...data } = block
 
   return sha256(JSON.stringify(data))
