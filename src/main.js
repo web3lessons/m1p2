@@ -32,5 +32,5 @@ for (let nonce = 0; nonce < 1e8; nonce++) {
   }
 }
 
-console.log('myAddress', blockchain.getBalance(myAddress))
-console.log('friendAddress', blockchain.getBalance(friendAddress))
+console.log('myAddress balance:', blockchain.getBalance(myAddress))
+console.log('friendAddress balance:', blockchain.getBalance(friendAddress))
