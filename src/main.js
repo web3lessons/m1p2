@@ -10,8 +10,7 @@ const blockchain = new Blockchain('data.json')
 /** @type {Block} */
 const block = {
   miner: myAddress,
-  previousHash:
-    '0000006080adafa493b762ac4cc6e1ff55e33b9d64face45a02eb5a5f30bb99a',
+  previousHash: blockchain.getLastHash(),
   transactions: [
     {
       from: myAddress,
@@ -22,8 +21,8 @@ const block = {
   ],
 }
 
-for (let i = 0; i < 1e8; i++) {
-  const blockWithNonce = { ...block, nonce: i }
+for (let nonce = 0; nonce < 1e8; nonce++) {
+  const blockWithNonce = { ...block, nonce }
   const hash = sha256OfBlock(blockWithNonce)
 
   if (hash.startsWith(HASH_PREFIX)) {

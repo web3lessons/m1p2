@@ -24,17 +24,19 @@ export class Blockchain {
     this.#balances = balances
   }
 
-  getBalance = address => {
+  getBalance(address) {
     return this.#balances.get(address) || 0
   }
 
-  addBlock = block => {
-    const previousHash = this.#blocks.at(-1)?.hash || ''
+  getLastHash() {
+    return this.#blocks.at(-1)?.hash || ''
+  }
 
+  addBlock(block) {
     const balances = calculateBalancesAfterBlock(
       new Map(this.#balances),
       block,
-      previousHash,
+      this.getLastHash(),
     )
 
     if (balances === null) {
